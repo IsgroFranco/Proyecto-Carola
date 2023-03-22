@@ -257,6 +257,7 @@ footer ul li a img:hover {
 #submitButton:active {
   transform: scale(0.9);
   box-shadow: 2px 2px 5px black;
+  transition: 300ms;
 }
 
 #message {
@@ -509,8 +510,11 @@ footer ul li a img:hover {
   }
 
   .grid__wrapper {
-    display: flex;
-    flex-direction: column;
+    grid-template-columns: 1fr;
+  }
+
+  .grid__items:last-child {
+    grid-column: unset;
   }
 }
 
