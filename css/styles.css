@@ -365,6 +365,15 @@ footer ul li a img:hover {
   padding: 1rem;
 }
 
+.gris__items {
+  transition: 350ms;
+}
+
+.grid__items:hover {
+  transform: scale(1.01);
+  transition: 400ms;
+}
+
 .grid__img {
   width: 100%;
   box-shadow: 2px 2px 8px rgb(0, 0, 0);
@@ -375,8 +384,65 @@ footer ul li a img:hover {
   align-self: center;
 }
 
-.grid__items:last-child {
+.carola5 {
   grid-column: -3/-1;
+}
+
+.light-box {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0);
+  transition: 350ms;
+}
+
+.light-box:target {
+  transform: scale(1);
+}
+
+.light-box img {
+  width: 75%;
+  height: auto;
+}
+
+.next {
+  background-color: rgb(170, 25, 25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  margin: 0.5rem;
+}
+
+.next img {
+  filter: invert(1);
+}
+
+.close {
+  display: block;
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(170, 25, 25);
+  border-radius: 50%;
+  font-weight: bold;
+  width: 40px;
+  width: 40px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.close:active {
+  transform: scale(0.9);
 }
 
 @media (max-width: 768px) {
