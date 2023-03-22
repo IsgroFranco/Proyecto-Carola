@@ -579,7 +579,7 @@ footer ul li a img:hover {
     grid-template-columns: 1fr;
   }
 
-  .grid__items:last-child {
+  .carola5 {
     grid-column: unset;
   }
 }
