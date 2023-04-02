@@ -1,0 +1,72 @@
+@use "../variables/variables" as vars;
+
+.tour {
+  background: vars.$tour-background;
+}
+
+.tour__section {
+  margin: 7rem 0 14rem;
+}
+
+.container__table {
+  width: 90%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 5rem;
+  grid-template-rows: repeat(5, 1fr);
+  text-align: center;
+  grid-auto-rows: 3rem;
+  background-color: vars.$white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 8px vars.$black;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+.table__hr {
+  display: none;
+}
+
+.table__title {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  display: flex;
+  justify-content: center;
+  background-color: vars.$black;
+  color: vars.$white;
+  border-radius: 5px;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.table__header {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.table__item {
+  font-size: 1.5rem;
+  font-style: italic;
+  font-family: monospace;
+}
+
+.table__buy {
+  width: 50px;
+  height: 2rem;
+  background-color: vars.$black;
+  border-radius: 0.5rem;
+  border: vars.$black;
+  cursor: pointer;
+}
+
+.table__buy:active {
+  transform: scale(0.9);
+}
+
+.button__img {
+  filter: invert(1);
+  width: 2rem;
+  padding: 4px;
+}

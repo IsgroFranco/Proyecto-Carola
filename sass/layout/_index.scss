@@ -1,0 +1,56 @@
+@use "../variables/variables" as vars;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin backdrop-blur($size) {
+  backdrop-filter: blur($size);
+  -webkit-backdrop-filter: blur($size);
+}
+
+.container {
+  background-image: url(../images/fondo-index.jpg);
+  height: 1000px;
+  @include flex-center;
+  background-size: 50%;
+  background-position: center;
+  background-attachment: fixed;
+
+  &__h1 {
+    padding: 30px;
+    color: vars.$white;
+    font-size: 64px;
+    font-weight: bold;
+    border: 2px solid vars.$white;
+    box-shadow: 0 0 30px vars.$black;
+    @include backdrop-blur(2px);
+    font-family: vars.$font-family;
+    font-weight: 400;
+  }
+
+  &-text {
+    background-color: vars.$black;
+    color: vars.$white;
+    @include flex-center;
+    flex-direction: row-reverse;
+
+    &__div {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      padding: 16px;
+    }
+  }
+
+  &-carola {
+    height: 35rem;
+
+    &__img {
+      height: 100%;
+      padding: 16px;
+    }
+  }
+}

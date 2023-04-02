@@ -1,0 +1,149 @@
+@use "../variables/variables" as vars;
+
+@media (max-width: 768px) {
+  .container-text {
+    flex-direction: column;
+    justify-content: center;
+    padding: 32px;
+  }
+  .container {
+    padding: 32px;
+    text-align: center;
+  }
+  .container__h1 {
+    font-size: 32px;
+  }
+  .container-carola {
+    height: 350px;
+  }
+
+  footer {
+    flex-direction: column-reverse;
+    text-align: center;
+
+    ul {
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+  }
+
+  .container__table {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .table__header {
+    display: none;
+  }
+  .table__hr {
+    display: block;
+    color: vars.$black;
+    width: 50%;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    --state-menu: translate(-100%);
+    --state-close: scale(0);
+    --state-hamburger: scale(1);
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    justify-content: space-between;
+
+    &:target {
+      --state-menu: translate(0);
+      --state-close: scale(1);
+      --state-hamburger: scale(0);
+    }
+
+    &__links {
+      background-color: vars.$black;
+      color: vars.$white;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0;
+      position: absolute;
+      display: grid;
+      grid-auto-flow: row;
+      align-content: center;
+      gap: 32px;
+      text-align: center;
+      transform: var(--state-menu);
+      transition: 0.4s transform;
+      font-weight: bold;
+      z-index: 9;
+    }
+
+    &__container .logo__container h2 {
+      display: none;
+    }
+  }
+
+  .container-text {
+    background-color: vars.$black;
+    color: vars.$white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 32px;
+  }
+
+  .container-carola__img {
+    height: 350px;
+    padding: 16px;
+  }
+  footer {
+    flex-direction: column-reverse;
+    gap: 8px;
+    text-align: center;
+  }
+
+  footer ul {
+    display: flex;
+    gap: 8px;
+  }
+
+  .container__h1 {
+    padding: 32px;
+
+    font-size: 32px;
+  }
+
+  .discography-container-iframe {
+    width: 22rem;
+    padding: 1rem;
+  }
+
+  .discography-container-title {
+    text-align: center;
+  }
+
+  .grid__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .carola5 {
+    grid-column: unset;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .logo__container h2 {
+    display: none;
+  }
+
+  .nav__links {
+    gap: 16px;
+  }
+
+  .bg-image {
+    background-size: 55rem;
+    background-color: vars.$white;
+  }
+}

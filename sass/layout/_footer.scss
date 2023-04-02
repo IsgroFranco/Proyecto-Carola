@@ -1,0 +1,29 @@
+@use "../variables/variables" as vars;
+
+footer {
+  background-color: vars.$black;
+  display: flex;
+  justify-content: space-between;
+  color: vars.$white;
+  align-items: center;
+  padding: 16px;
+  p {
+    margin: 0;
+  }
+  ul {
+    display: flex;
+    gap: 8px;
+    margin: 0;
+    li a img {
+      height: 2rem;
+      padding: 0.25rem;
+      width: 2rem;
+      filter: grayscale(100);
+      &:hover {
+        filter: none;
+        transition: 1.5ms;
+        transform: scale(1.1);
+      }
+    }
+  }
+}
